@@ -6,9 +6,14 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 st.title("Chatbot using Hugging Face Transformers")
 
+st.title("Done by Napoleon Perez")
+
+
+
 from PIL import Image
 image = Image.open('bot.jpg')
 st.image(image, caption='bot')
+
 
 @st.cache(hash_funcs={transformers.models.gpt2.tokenization_gpt2_fast.GPT2TokenizerFast: hash}, suppress_st_warning=True)
 def load_data():    
@@ -18,7 +23,7 @@ def load_data():
  
 tokenizer, model = load_data()
 
-st.write("Welcome to the Chatbot. I am still learning, please be patient")
+st.write("Welcome to the Chatbot")
 input = st.text_input('User:')
 
 if 'count' not in st.session_state or st.session_state.count == 6:
