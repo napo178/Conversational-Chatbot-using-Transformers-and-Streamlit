@@ -9,7 +9,7 @@ st.title("Chatbot using Hugging Face Transformers")
 from PIL import Image
 image = Image.open('bot.jpg')
 
-st.image(image, caption='bot)
+st.image(image, caption='bot')
 
 @st.cache(hash_funcs={transformers.models.gpt2.tokenization_gpt2_fast.GPT2TokenizerFast: hash}, suppress_st_warning=True)
 def load_data():    
